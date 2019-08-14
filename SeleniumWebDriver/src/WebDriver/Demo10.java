@@ -13,13 +13,22 @@ public class Demo10 {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://opensource-demo.orangehrmlive.com/");
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		//driver.get("https://opensource-demo.orangehrmlive.com/");
+		js.executeScript("window.location = 'https://opensource-demo.orangehrmlive.com/';");
 		driver.manage().window().maximize();
 		
 		// Get Page Title using Java Script Executor
-		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
 		String title = js.executeScript("return document.title").toString();
 		System.out.println(title);
+		
+		// Get Size of window
+		long Height = (Long)js.executeScript("return window.innerHeight");
+		long Width = (Long)js.executeAsyncScript("return window.innetWidth");
+		
+		System.out.println(Height + " " + Width);
 		
 		// Refresh page using Java Script Executor
 		driver.navigate().refresh();
@@ -28,15 +37,17 @@ public class Demo10 {
 		js.executeScript("document.getElementById('txtUsername').value='Admin'");
 		js.executeScript("document.getElementById('txtPassword').value='admin123'");
 		
-
+		//getElementById is only command in javascript and getElementsByclass is another command
 		WebElement ele = (WebElement)js.executeScript("return document.getElementById('txtUsername')");
+		
 		String name = ele.getAttribute("value");
+		
 		System.out.println(name);
 		Thread.sleep(2000);
 		js.executeScript("document.getElementById('btnLogin').click()");
 		
 		Thread.sleep(2000);
-		js.executeScript("document.getElementById('menu_pim_viewPimModule').click()");
+		js.executeScript("document.getElementById('menu_pim_viewPimModule').click()"); 
 		
 		//Thread.sleep(2000);
 		//js.executeScript("document.getElementById('menu_recruitment_viewRecruitmentModule').click()");
@@ -56,7 +67,14 @@ public class Demo10 {
 		
 		//js.executeScript("window.screenTop");
 		
-		//js.executeScript("document.getElementById('ohrmList_chkSelectRecord_5').scrollIntoView");
+		// -------------------> Scroll in to View
+		//js.executeScript("document.getElementById('ohrmList_chkSelectRecord_5').scrollIntoView()");
+		
+		//JavascriptExecutor js = (JavascriptExecutor)driver;
+		//js.executeScript("document.getElementById('mce-EMAIL').scrollIntoView()");
+		
+		//WebElement redeem = driver.findElement(By.id("mce-EMAIL"));
+		//js.executeScript("arguments[0].scrollIntoView(true);", redeem);
 		
 		System.out.println("---------- Using WebDriver ----------");
 		System.out.println(driver.findElement(By.xpath("//table[@id='resultTable']")).getText());
@@ -74,15 +92,13 @@ public class Demo10 {
 		driver.navigate().forward();
 		js.executeScript("window.history.forward()");
 		
-		
+		// Handle alert with javascript
 		
 		js.executeScript("alert('Welcome to the session on selenium')");
 		
 		Alert alert = driver.switchTo().alert();
 		System.out.println(alert.getText());
 		alert.accept();
-		
-		
 		
 	}
 }
