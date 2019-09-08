@@ -20,7 +20,6 @@ public class Demo10 {
 		driver.manage().window().maximize();
 		
 		// Get Page Title using Java Script Executor
-		
 		String title = js.executeScript("return document.title").toString();
 		System.out.println(title);
 		
@@ -53,28 +52,28 @@ public class Demo10 {
 		//js.executeScript("document.getElementById('menu_recruitment_viewRecruitmentModule').click()");
 		
 		// Scroll down using Coordinates
-		//js.executeScript("window.scrollBy(0,600)");
+		// js.executeScript("window.scrollBy(0,600)");
 		// Scroll Up using Coordinates
-		//js.executeScript("window.scrollBy(0,-600)");
+		// js.executeScript("window.scrollBy(0,-600)");
 		// Scroll Back to default using Coordinates
-		//js.executeScript("window.scrollTo(0,0)");
+		// js.executeScript("window.scrollTo(0,0)");
 		
 		// Scroll till the end of the page
-		//js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
-		//Thread.sleep(2000);
+		// js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
+		// Thread.sleep(2000);
 		// Scroll up to the top of the page
-		//js.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
+		// js.executeScript("window.scrollBy(0, -document.body.scrollHeight)");
 		
-		//js.executeScript("window.screenTop");
+		// js.executeScript("window.screenTop");
 		
 		// -------------------> Scroll in to View
-		//js.executeScript("document.getElementById('ohrmList_chkSelectRecord_5').scrollIntoView()");
+		// js.executeScript("document.getElementById('ohrmList_chkSelectRecord_5').scrollIntoView()");
 		
-		//JavascriptExecutor js = (JavascriptExecutor)driver;
-		//js.executeScript("document.getElementById('mce-EMAIL').scrollIntoView()");
+		// JavascriptExecutor js = (JavascriptExecutor)driver;
+		// js.executeScript("document.getElementById('mce-EMAIL').scrollIntoView()");
 		
-		//WebElement redeem = driver.findElement(By.id("mce-EMAIL"));
-		//js.executeScript("arguments[0].scrollIntoView(true);", redeem);
+		// WebElement redeem = driver.findElement(By.id("mce-EMAIL"));
+		// js.executeScript("arguments[0].scrollIntoView(true);", redeem);
 		
 		System.out.println("---------- Using WebDriver ----------");
 		System.out.println(driver.findElement(By.xpath("//table[@id='resultTable']")).getText());
@@ -92,7 +91,7 @@ public class Demo10 {
 		driver.navigate().forward();
 		js.executeScript("window.history.forward()");
 		
-		// Handle alert with javascript
+		// Generating alert with javascript and Handling it with selenium
 		
 		js.executeScript("alert('Welcome to the session on selenium')");
 		

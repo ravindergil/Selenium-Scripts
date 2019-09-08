@@ -12,8 +12,10 @@ import org.openqa.selenium.interactions.Actions;
 public class Demo6 {
 
 	public static void main(String[] args) throws AWTException, InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\chromedriver.exe");
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumJarFiles\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		  
 		driver.get("http://realestate.upskills.in/admin");
 		driver.manage().window().maximize();
 		

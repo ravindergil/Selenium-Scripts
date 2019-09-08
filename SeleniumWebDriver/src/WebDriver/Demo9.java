@@ -15,8 +15,8 @@ public class Demo9 {
 		String parentWindow = driver.getWindowHandle();
 		System.out.println("Parent Window Name : " + parentWindow);
 		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("button#button1")).click();	
-
+		driver.findElement(By.cssSelector("button#button1")).click();
+		
 
 
 	}

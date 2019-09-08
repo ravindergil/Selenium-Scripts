@@ -18,7 +18,7 @@ public class Demo4 {
 		driver.findElement(By.cssSelector("input[name='userName']")).sendKeys("Sunil");
 		driver.findElement(By.cssSelector("input[name='password']")).sendKeys("sunil");
 		driver.findElement(By.cssSelector("input[name='login']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		WebElement WE = driver.findElement(By.cssSelector("select[name='passCount']"));
 		Select select = new Select(WE);
 		select.selectByVisibleText("2");
@@ -30,19 +30,26 @@ public class Demo4 {
 		driver.findElement(By.xpath("//input[@name='findFlights' and @type='image']")).click();
 		driver.findElement(By.xpath("//input[@name='reserveFlights' and @type='image']")).click();
 		driver.findElement(By.name("passFirst0")).sendKeys("ABC");	
+		Thread.sleep(2000);
 		driver.findElement(By.name("passLast0")).sendKeys("DEF");
+		Thread.sleep(2000);
 		driver.findElement(By.name("creditnumber")).sendKeys("9876543210");
+		Thread.sleep(2000);
 		driver.findElement(By.name("cc_frst_name")).sendKeys("ABC");
+		Thread.sleep(2000);
 		driver.findElement(By.name("cc_last_name")).sendKeys("DEF");
-		driver.findElement(By.xpath("//*[contains(text(),'Ticketless Travel')]")).click();
-		driver.findElement(By.xpath("//*[contains(text(),'Same as Billing Address')]")).click();
-		driver.findElements(By.name("ticketLess"));
+		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//*[contains(text(),'Ticketless Travel')]")).click();
+		//driver.findElement(By.xpath("//*[contains(text(),'Same as Billing Address')]")).click();
+		//driver.findElements(By.name("ticketLess"));
 		
 		List<WebElement> checkBoxes = driver.findElements(By.name("ticketLess"));
 		for(WebElement E:checkBoxes){
 			E.click();
+			Thread.sleep(2000);
 		}
 		
 		driver.findElement(By.name("buyFlights")).click();
+		driver.close();
 	}
 }
