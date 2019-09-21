@@ -22,7 +22,5 @@ public class Demo13_SnapShots {
 		File screenshot = ((TakesScreenshot)Driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new File("D://Sunil.png"));
 		
-
 	}
-
 }

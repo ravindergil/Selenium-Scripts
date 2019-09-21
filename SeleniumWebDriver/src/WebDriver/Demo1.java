@@ -12,11 +12,12 @@ public class Demo1 {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumJarFiles\\chromedriver_win32\\chromedriver.exe");
 		WebDriver ChromeDriver = new ChromeDriver();
-		
+		ChromeDriver.manage().window().maximize();
 		ChromeDriver.get("https://opensource-demo.orangehrmlive.com");
 		ChromeDriver.manage().window().maximize();
 		
 		String ExpectedTitle = "OrangeHRM";
+		
 		
 		ChromeDriver.findElement(By.cssSelector("#txtUsername")).sendKeys("Admin");
 		ChromeDriver.findElement(By.cssSelector("input#txtPassword")).sendKeys("admin123");
