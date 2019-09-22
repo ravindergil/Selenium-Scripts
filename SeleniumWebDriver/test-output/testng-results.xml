@@ -1,98 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2858" started-at="2019-08-14T08:37:44Z" finished-at="2019-08-14T08:37:47Z">
+  <suite name="Suite Annotations" duration-ms="54" started-at="2019-09-22T08:55:24Z" finished-at="2019-09-22T08:55:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2858" started-at="2019-08-14T08:37:44Z" finished-at="2019-08-14T08:37:47Z">
-      <class name="WebDriver.Demo16_Grid">
-        <test-method status="FAIL" signature="testcase()[pri:0, instance:WebDriver.Demo16_Grid@2aaf7cc2]" name="testcase" duration-ms="2823" started-at="2019-08-14T14:07:44Z" finished-at="2019-08-14T14:07:47Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-92RCTKU', ip: '9.193.20.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'DESKTOP-92RCTKU', ip: '9.193.20.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at WebDriver.Demo16_Grid.testcase(Demo16_Grid.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-Caused by: java.net.ConnectException: Failed to connect to /9.193.20.71:4444
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	... 28 more
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-	... 50 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+    <test name="Test Annotations" duration-ms="54" started-at="2019-09-22T08:55:24Z" finished-at="2019-09-22T08:55:24Z">
+      <class name="PracticePack.testTestNG2">
+        <test-method status="PASS" signature="login1()[pri:0, instance:PracticePack.testTestNG2@45c8e616]" name="login1" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase -->
-      </class> <!-- WebDriver.Demo16_Grid -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- login1 -->
+        <test-method status="PASS" signature="beforeClassSetup()[pri:0, instance:PracticePack.testTestNG2@45c8e616]" name="beforeClassSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassSetup -->
+        <test-method status="PASS" signature="home1()[pri:0, instance:PracticePack.testTestNG2@45c8e616]" name="home1" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- home1 -->
+        <test-method status="PASS" signature="register1()[pri:0, instance:PracticePack.testTestNG2@45c8e616]" name="register1" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register1 -->
+        <test-method status="PASS" signature="afterClassSetup()[pri:0, instance:PracticePack.testTestNG2@45c8e616]" name="afterClassSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassSetup -->
+      </class> <!-- PracticePack.testTestNG2 -->
+      <class name="PracticePack.testTestNG">
+        <test-method status="PASS" signature="beforeSuiteSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="beforeSuiteSetup" is-config="true" duration-ms="16" started-at="2019-09-22T14:25:23Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteSetup -->
+        <test-method status="PASS" signature="beforeTestSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="beforeTestSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestSetup -->
+        <test-method status="PASS" signature="beforeClassSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="beforeClassSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassSetup -->
+        <test-method status="PASS" signature="register()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="register" duration-ms="16" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="login()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="login" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="home()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="home" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- home -->
+        <test-method status="PASS" signature="afterClassSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="afterClassSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassSetup -->
+        <test-method status="PASS" signature="afterTestSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="afterTestSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestSetup -->
+        <test-method status="PASS" signature="afterSuiteSetup()[pri:0, instance:PracticePack.testTestNG@1fbc7afb]" name="afterSuiteSetup" is-config="true" duration-ms="0" started-at="2019-09-22T14:25:24Z" finished-at="2019-09-22T14:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuiteSetup -->
+      </class> <!-- PracticePack.testTestNG -->
+    </test> <!-- Test Annotations -->
+  </suite> <!-- Suite Annotations -->
 </testng-results>

@@ -3,16 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="WebDriver.Demo16_Grid"/>
+      <class name="PracticePack.testTestNG2"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="WebDriver.Demo16_Grid">
-        <methods>
-          <include name="testcase"/>
-        </methods>
-      </class> <!-- WebDriver.Demo16_Grid -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

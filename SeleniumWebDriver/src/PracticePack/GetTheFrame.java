@@ -23,6 +23,7 @@ public class GetTheFrame {
 			System.out.println(frames.get(i).getAttribute("name"));
 			driver.switchTo().frame(i);
 			
+			
 			List <WebElement> coupon = driver.findElements(Locator);
 			
 			if(coupon.size()>0){

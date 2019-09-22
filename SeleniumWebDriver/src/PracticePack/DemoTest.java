@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +26,10 @@ System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\chromedriver.exe"
 	
 		WebElement gmail = driver.findElement(By.linkText("Gmail"));
 		WebElement images = driver.findElement(By.linkText("Images"));
+		
+		Point point = gmail.getLocation();
+		int xcord = point.getX();
+		int ycord = point.getY();
 		
 		Actions act = new Actions(driver);
 		act.contextClick(gmail).build().perform();
